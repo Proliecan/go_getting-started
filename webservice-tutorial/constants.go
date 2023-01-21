@@ -6,7 +6,7 @@ import (
 
 // constant at package level
 const (
-	pi     = 3.14 // evauated at compile time
+	pi     = 3.14 // evaluated at compile time
 	first  = iota + 6
 	second = 2 << iota // bit shift left by 2 = multiply by 4
 	third              // reuses the previous expression (2 << iota)
