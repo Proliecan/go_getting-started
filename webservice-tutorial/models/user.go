@@ -10,3 +10,14 @@ var (
 	users  []*User
 	nextID = 1
 )
+
+func getUsers() []*User {
+	return users
+}
+
+func addUser(u User) (User, error) {
+	u.ID = nextID
+	nextID++
+	users = append(users, &u) // remember: users stores pointers, so we have to get the address of u!
+	return u, nil
+}
